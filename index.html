@@ -6,18 +6,42 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="tablica"></div>
     <script>
         //Zadanie 1
         const tab = ["Kamilo", 1, "Bartek", 2, "Szymon", "Karolina", 3, "Dominik", "Jeleń", 5];
-        console.log(`Długość tablicy wynosi: ${tab.length}`);
-        document.body.innerHTML = tab;
+        //document.body.innerHTML += `${tab}<br>`;
+        console.log(`${tab}`);
+
         //zadanie 2
-        //const tab2 = tab.reverse()
-      //  for (let i = 0;i<tab.length;i++) {
-       //     const reverse_tab2 = tab2[i];
-       // }
-       // document.body.innerHTML = tab2;
+        const tab2 = tab.reverse();
+        console.log(`${tab2}`);
+
+        //zadanie 3
+        const tab3 = [];
+        for(let i = 1;i<20;i++) {
+            if(i%3==0 && i%5==0) tab3.push(i);
+        }
+        console.log(`${tab3}`);
+
+        //zadanie 4
+        let numbers = [];
+        for(let i = 0;i<=5-1;i++) {
+            let number = parseFloat(prompt(`Podaj ${i+1} liczbę: `));
+            numbers.unshift(number);
+        }
+        console.log(`${numbers}`);
+
+        //zadanie 5
+        let polaczona_tablica = tab3.concat(numbers);
+        console.log(`Połączone tablice z zadania 3 i 4: ${polaczona_tablica}`);
+
+        //zadanie 6
+        polaczona_tablica.sort();
+        console.log(polaczona_tablica);
+
+        //zadanie 7
+        let ucieta_Tablica = polaczona_tablica.slice(3, 6);
+        console.log(`Elementy z tablicy od 3 do 6 elementu: ${ucieta_Tablica}`);
     </script>
 </body>
 </html>
